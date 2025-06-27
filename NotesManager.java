@@ -5,7 +5,7 @@ public class NotesManager {
     private static final String FILE_NAME = "notes.txt";
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // move Scanner inside main
+        Scanner scanner = new Scanner(System.in); 
         int choice;
 
         do {
@@ -15,14 +15,14 @@ public class NotesManager {
             System.out.println("3. Exit");
             System.out.print("Enter choice: ");
 
-            // Check for input mismatch
+            
             while (!scanner.hasNextInt()) {
                 System.out.print("Invalid input. Enter a number: ");
-                scanner.next(); // consume invalid input
+                scanner.next(); 
             }
 
             choice = scanner.nextInt();
-            scanner.nextLine(); // consume leftover newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -39,7 +39,7 @@ public class NotesManager {
             }
         } while (choice != 3);
 
-        scanner.close(); // Always close the scanner
+        scanner.close(); 
     }
 
     private static void addNote(Scanner scanner) {
